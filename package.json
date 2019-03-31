@@ -1,0 +1,25 @@
+{
+    "name": "webgl-devtools",
+    "version": "1.0.0",
+    "description": "",
+    "main": "dist/index.js",
+    "module": "dist/indes.module.js",
+    "types": "dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "copy-types": "cp types/* dist/.",
+        "build": "npm run clean && rollup -c && npm run copy-types",
+        "start": "npm run build",
+        "clean": "rm -rf dist"
+    },
+    "author": "",
+    "license": "",
+    "devDependencies": {
+        "rollup": "^1.7.4"
+    },
+    "dependencies": {
+        "@types/webgl2": "0.0.4"
+    }
+}
